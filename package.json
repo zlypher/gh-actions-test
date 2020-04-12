@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "example": "echo \"Hello World\""
+    "example": "echo \"Hello World\" >> result.txt"
   },
   "repository": {
     "type": "git",

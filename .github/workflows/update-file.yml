@@ -1,8 +1,8 @@
 name: Update File
-on: [push]
-# on:
-#   schedule:
-#     - cron: "0 1 * * *"
+# on: [push]
+on:
+  schedule:
+    - cron: "35 16 * * *"
 
 jobs:
   build:
@@ -17,3 +17,10 @@ jobs:
           node-version: "10.x"
       - run: npm install
       - run: npm run example
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Update files" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
