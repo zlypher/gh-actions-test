@@ -2,7 +2,7 @@ name: Update File
 # on: [push]
 on:
   schedule:
-    - cron: "52 14 * * *"
+    - cron: "0 16 * * *"
 
 jobs:
   build:
@@ -25,3 +25,5 @@ jobs:
           git commit -m "Update files" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
