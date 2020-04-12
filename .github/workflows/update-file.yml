@@ -2,7 +2,7 @@ name: Update File
 # on: [push]
 on:
   schedule:
-    - cron: "35 16 * * *"
+    - cron: "42 14 * * *"
 
 jobs:
   build:
