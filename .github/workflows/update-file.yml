@@ -2,7 +2,7 @@ name: Update File
 # on: [push]
 on:
   schedule:
-    - cron: "42 14 * * *"
+    - cron: "52 14 * * *"
 
 jobs:
   build:
@@ -21,6 +21,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git add .
           git commit -m "Update files" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
