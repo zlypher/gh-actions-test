@@ -1,0 +1,16 @@
+name: Test ENV
+on: [push]
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+      - run: npm install
+      - name: Test output
+        env:
+          SUPERSECRET: ${{ secrets.SUPERSECRET }}
+        run: npm run test

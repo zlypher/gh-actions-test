@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "example": "echo \"Hello World\" >> result.txt"
+    "example": "echo \"Hello World\" >> result.txt",
+    "test": "node ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/zlypher/gh-actions-test/issues"
   },
-  "homepage": "https://github.com/zlypher/gh-actions-test#readme"
+  "homepage": "https://github.com/zlypher/gh-actions-test#readme",
+  "dependencies": {}
 }
